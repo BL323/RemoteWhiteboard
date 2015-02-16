@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RemoteWhiteboard.iml" filepath="$PROJECT_DIR$/RemoteWhiteboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RemoteWhiteboard.Core/RemoteWhiteboard.Core.iml" filepath="$PROJECT_DIR$/RemoteWhiteboard.Core/RemoteWhiteboard.Core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WhiteboardClient/WhiteboardClient.iml" filepath="$PROJECT_DIR$/WhiteboardClient/WhiteboardClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WhiteboardServer/WhiteboardServer.iml" filepath="$PROJECT_DIR$/WhiteboardServer/WhiteboardServer.iml" />
+    </modules>
+  </component>
+</project>
