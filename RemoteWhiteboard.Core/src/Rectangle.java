@@ -5,9 +5,15 @@ import java.awt.*;
  */
 public class Rectangle extends BaseShape implements IShape
 {
-
     public void SetSize()
     {
 
+    }
+
+    @Override
+    public void draw(Graphics graphics)
+    {
+        Point pos = getPosition();
+        graphics.drawRect(pos.x, pos.y, 30, 30);
     }
 }

@@ -17,7 +17,7 @@ public class WhiteboardServerApp
             WhiteBoardShapeServer server = WhiteBoardShapeServer.GetInstance();
 
             Naming.rebind("Whiteboard", server);
-            System.out.println("Whiteboard server bound in reg..");
+            System.out.println("Whiteboard server bound in Jvm reg...");
         }
         catch(Exception ex)
         {

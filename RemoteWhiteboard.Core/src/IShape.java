@@ -8,7 +8,11 @@ import java.rmi.Remote;
  */
 public interface IShape extends Remote
 {
+    Point getPosition();
+    void setPosition(Point point);
+
     void SetColour(Color colour);
-    void SetPosition(Dimension dimension);
     void SetSize();
+
+    void draw(Graphics graphics);
 }
