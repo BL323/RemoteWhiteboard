@@ -1,11 +1,16 @@
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.*;
 import java.awt.event.*;
 
 /**
  * Created by BLourence on 16/02/15.
  */
-public class WhiteboardView implements ActionListener
+public class WhiteboardView implements ActionListener, ChangeListener
 {
+    private int size;
+
     private JButton clearBtn;
     private JButton circleBtn;
     private JButton triangleBtn;
@@ -14,6 +19,8 @@ public class WhiteboardView implements ActionListener
     private JPanel panel1;
     private JPanel WhiteboardContainerPannel;
     private WhiteboardPanel whiteboardPannel;
+    private JSpinner sizeSpinner;
+    private JComboBox colourPicker;
 
     private WhiteboardClient whiteboardClient = null;
 
@@ -25,6 +32,15 @@ public class WhiteboardView implements ActionListener
         circleBtn.addActionListener(this);
         triangleBtn.addActionListener(this);
         clearBtn.addActionListener(this);
+
+
+        colourPicker.addItem("Black");
+        colourPicker.addItem("Red");
+        colourPicker.addItem("Green");
+        colourPicker.addItem("Blue");
+
+        sizeSpinner.setValue(30);
+        sizeSpinner.addChangeListener(this);
     }
 
 
@@ -52,22 +68,15 @@ public class WhiteboardView implements ActionListener
         String act = actionEvent.getActionCommand();
         if(act.equals("Rectangle"))
         {
-            System.out.println("Rectangle Button Pressed...");
-            whiteboardClient.setSelectedShape(ShapeEnum.Rectanlge);
-            //whiteboardClient.AddNewShape(ShapeEnum.Square);
-
+            whiteboardClient.setSelectedShape(ShapeType.Rectanlge);
         }
         else if(act.equals("Triangle"))
         {
-            System.out.println("Triangle Button Pressed..");
-            whiteboardClient.setSelectedShape(ShapeEnum.Trianlge);
-            //whiteboardClient.AddNewShape(ShapeEnum.);
+            whiteboardClient.setSelectedShape(ShapeType.Trianlge);
         }
         else if(act.equals("Circle"))
         {
-            System.out.println("Circle Button Pressed..");
-            whiteboardClient.setSelectedShape(ShapeEnum.Circle);
-           // whiteboardClient.AddNewShape(ShapeEnum.Square);
+            whiteboardClient.setSelectedShape(ShapeType.Circle);
         }
         else if(act.equals("Clear"))
         {
@@ -76,4 +85,14 @@ public class WhiteboardView implements ActionListener
         }
     }
 
+    @Override
+    public void stateChanged(ChangeEvent changeEvent)
+    {
+        whiteboardClient.setSize((Integer)sizeSpinner.getValue());
+    }
+
+    public void invokeRepaint()
+    {
+        whiteboardPannel.repaint();
+    }
 }

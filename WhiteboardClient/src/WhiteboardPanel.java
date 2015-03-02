@@ -11,15 +11,7 @@ public class WhiteboardPanel extends JPanel implements MouseInputListener
 {
     private WhiteboardClient whiteboardClient = null;
 
-    //FOR LOCAL TESTING
-    private ArrayList<IShape> localShapes = new ArrayList<IShape>();
-    private ShapeFactory shapeFactory = new ShapeFactory();
-
-
-    public void SetWhiteboardClient(WhiteboardClient inputWhiteboardClient)
-    {
-        whiteboardClient = inputWhiteboardClient;
-    }
+    //Constructor
     public WhiteboardPanel()
     {
         super();
@@ -31,10 +23,14 @@ public class WhiteboardPanel extends JPanel implements MouseInputListener
         repaint();
     }
 
+    public void SetWhiteboardClient(WhiteboardClient inputWhiteboardClient)
+    {
+        whiteboardClient = inputWhiteboardClient;
+    }
+
     public void clearWhiteboard()
     {
-        localShapes.clear();
-        repaint();
+        whiteboardClient.clearShapes();
     }
 
     @Override
@@ -42,29 +38,18 @@ public class WhiteboardPanel extends JPanel implements MouseInputListener
     {
         super.paintComponent(graphics);
 
-//        ArrayList<IShape> curShapes = whiteboardClient.GetCurrentShapes()
-
-        for(int shapeIndex = 0; shapeIndex < localShapes.size(); shapeIndex++)
+        for(int shapeIndex = 0; shapeIndex < whiteboardClient.GetCurrentShapes().size(); shapeIndex++)
         {
-            IShape shape = localShapes.get(shapeIndex);
+            IShape shape = whiteboardClient.GetCurrentShapes().get(shapeIndex);
             shape.draw(graphics);
         }
-
     }
-
 
     @Override
     public void mouseClicked(MouseEvent mouseEvent)
     {
-        System.out.println("Clicked: " + mouseEvent.getPoint());
-
         if(whiteboardClient.getCurrentShape() != null)
-        {
-            Point p = mouseEvent.getPoint();
-            IShape shape = shapeFactory.GenerateShape(whiteboardClient.getCurrentShape(), p);
-            localShapes.add(shape);
-            repaint();
-        }
+            whiteboardClient.AddNewShape(mouseEvent.getPoint());
     }
 
     @Override
@@ -101,5 +86,10 @@ public class WhiteboardPanel extends JPanel implements MouseInputListener
     public void mouseMoved(MouseEvent mouseEvent)
     {
 
+    }
+
+    public void invokeRepaint()
+    {
+        repaint();
     }
 }

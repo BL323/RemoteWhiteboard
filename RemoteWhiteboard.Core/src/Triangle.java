@@ -5,21 +5,25 @@ import java.awt.*;
  */
 public class Triangle extends BaseShape implements IShape
 {
-    @Override
-    public void SetSize()
+    public Triangle(Color inputColour, int inputSize, Point inputPosition)
     {
-
+        super(inputColour, inputSize, inputPosition);
     }
 
     @Override
     public void draw(Graphics graphics)
     {
         Point pos = getPosition();
+        graphics.setColor(getColour());
 
-        int[] polyX = {pos.x-10, pos.x, pos.x+10};
-        int[] polyY = {pos.y+20, pos.y, pos.y+20};
+        //pos[20, 10]
+        int xSpacer = getSize()/2;
+        int ySpacer = getSize();
+
+        int[] polyX = {pos.x-xSpacer, pos.x, pos.x+xSpacer};
+        int[] polyY = {pos.y+ySpacer, pos.y, pos.y+ySpacer};
         Polygon poly = new Polygon(polyX, polyY, 3);
 
-        graphics.drawPolygon(poly);
+        graphics.fillPolygon(poly);
     }
 }

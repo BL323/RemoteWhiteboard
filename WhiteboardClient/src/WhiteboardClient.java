@@ -8,23 +8,31 @@ import java.util.ArrayList;
  */
 public class WhiteboardClient
 {
-    private ShapeFactory shapeFactory = null;
+    private int size = 30;
+    public int getSize(){return size;}
+    public void setSize(int inputSize){size = inputSize;}
+
+    private Color colour;
+    public Color getColour(){return colour;}
+    public void setColour(Color inputColour){colour = inputColour;}
+
     private IWhiteboard whiteboard = null;
-    private ArrayList<IShape> shapes = null;
+    private static WhiteboardView whiteboardView = null;
+    private IClientCallback callbackClient = null;
 
-    private boolean initShapeSelected = false;
+    private ArrayList<IShape> shapes;
 
-    private ShapeEnum currentShape;
-    public ShapeEnum getCurrentShape()
+
+    private ShapeType currentShape;
+    public ShapeType getCurrentShape()
     {
     return currentShape;
     }
-    public void setSelectedShape(ShapeEnum newSelectedShape)
+    public void setSelectedShape(ShapeType newSelectedShape)
     {
         if(newSelectedShape != currentShape)
             currentShape = newSelectedShape;
     }
-
     public void SetupClient()
     {
         try
@@ -33,9 +41,10 @@ public class WhiteboardClient
             System.out.println("Whiteboard initialised....");
 
             System.out.println("Retrieving current whiteboard shapes");
-            shapes = whiteboard.GetCurrentShapes();
+            shapes = whiteboard.getCurrentShapes();
 
-            shapeFactory = new ShapeFactory();
+            callbackClient = new ClientCallback(this);
+            whiteboard.registerClient(callbackClient);
         }
         catch (Exception ex)
         {
@@ -43,51 +52,63 @@ public class WhiteboardClient
             ex.getStackTrace();
         }
     }
-
-    public void AddNewShape(ShapeEnum shapeEnum)
+    public void updateClient()
     {
-//        try
-//        {
-         //   IShape shape = shapeFactory.GenerateShape(shapeEnum, null);
-         //   whiteboard.AddShape(shape);
-//        }
-//        catch (Exception ex)
-//        {
-//            System.out.println("Error adding new shape: " + ex.getMessage());
-//            ex.getStackTrace();
-//        }
+        GetCurrentShapes();
+        whiteboardView.invokeRepaint();
     }
-
-    public ArrayList<IShape> GetCurrentShapes()
+    public void clearShapes()
     {
-        ArrayList<IShape> jk = null;
         try
         {
-            jk = whiteboard.GetCurrentShapes();
+            whiteboard.clearWhiteboard();
+            whiteboardView.invokeRepaint();
+        }
+        catch(Exception ex)
+        {
+            System.out.println("Error Clearing Whiteboard: " + ex.getMessage());
+            ex.getStackTrace();
+        }
+    }
+    public void AddNewShape(Point point)
+    {
+        try
+        {
+            whiteboard.addShape(getCurrentShape(), getColour(), getSize(), point);
+
+            //invoke from call back
+            shapes = whiteboard.getCurrentShapes();
+            whiteboardView.invokeRepaint();
+        }
+        catch(Exception ex)
+        {
+            System.out.println("Error adding new shape: " + ex.getMessage());
+            ex.getStackTrace();
+        }
+    }
+    public ArrayList<IShape> GetCurrentShapes()
+    {
+        ArrayList<IShape> currentShapes = null;
+        try
+        {
+            currentShapes = whiteboard.getCurrentShapes();
         }
         catch (Exception ex)
         {
             System.out.println(ex.getMessage());
         }
-        return jk;
+        return currentShapes;
     }
 
     public static void main(String[] args)
     {
         WhiteboardClient wc = new WhiteboardClient();
-        //wc.SetupClient();
+        wc.SetupClient();
 
-        WhiteboardView whiteboardView = new WhiteboardView();
+        whiteboardView = new WhiteboardView();
         whiteboardView.SetController(wc);
 
+        //init GUI
         whiteboardView.ShowForm();
-
-
-        //set up GUI
-        //wc.AddNewShape(ShapeEnum.Circle);
-        //wc.AddNewShape(ShapeEnum.Square);
-
-        //ArrayList<IShape> t = wc.GetCurrentShapes();
-        //System.out.println("Shape List Length: " + t.size());
     }
 }

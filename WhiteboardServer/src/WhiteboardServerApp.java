@@ -14,7 +14,7 @@ public class WhiteboardServerApp
         {
             //creates registry instance in JavaVm
             Registry reg = LocateRegistry.createRegistry(1099);
-            WhiteBoardShapeServer server = WhiteBoardShapeServer.GetInstance();
+            WhiteBoardShapeServer server = WhiteBoardShapeServer.getInstance();
 
             Naming.rebind("Whiteboard", server);
             System.out.println("Whiteboard server bound in Jvm reg...");

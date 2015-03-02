@@ -4,24 +4,23 @@ import java.awt.*;
  */
 public class ShapeFactory
 {
-    public IShape GenerateShape(ShapeEnum shapeEnum, Point point)
+    public IShape GenerateShape(ShapeType shapeType, Color colour, int size, Point position)
     {
         IShape shape = null;
 
-        switch (shapeEnum)
+        switch (shapeType)
         {
             case Circle:
-                shape = new Circle();
-                break;
-            case Rectanlge:
-                shape = new Rectangle();
+                shape = new Circle(colour, size, position);
                 break;
             case Trianlge:
-                shape = new Triangle();
+                shape = new Triangle(colour, size, position);
+                break;
+            case Rectanlge:
+                shape = new Rectangle(colour, size, position);
                 break;
         }
-
-        shape.setPosition(point);
         return shape;
     }
+
 }

@@ -12,7 +12,9 @@ public interface IShape extends Remote
     void setPosition(Point point);
 
     void SetColour(Color colour);
-    void SetSize();
+
+    int getSize();
+    void setSize(int s);
 
     void draw(Graphics graphics);
 }

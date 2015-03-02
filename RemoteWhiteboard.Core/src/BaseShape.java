@@ -13,14 +13,20 @@ import java.rmi.server.UnicastRemoteObject;
  */
 public abstract class BaseShape implements Serializable, Shape
 {
-    private Point point;
+    private int size = 30;
+    private Point position;
     //Default Blue Colour
     private Color colour = Color.BLUE;
+    public Color getColour(){return colour;}
+    public void setColour(Color inputColour){colour = inputColour;}
 
-    public Point getPosition(){return point; }
+    public int getSize(){return size;}
+    public void setSize(int s){size = s;}
+
+    public Point getPosition(){return position; }
     public void setPosition(Point p)
     {
-        point = p;
+        position = p;
     }
 
     public void SetColour(Color inputColour)
@@ -28,11 +34,12 @@ public abstract class BaseShape implements Serializable, Shape
         colour = inputColour;
     }
 
-    //Constructors
-    public BaseShape(){}
-    public BaseShape(Point p)
+    //Constructor
+    public BaseShape(Color inputColour, int inputSize, Point inputPosition)
     {
-        point = p;
+        colour = inputColour;
+        size = inputSize;
+        position = inputPosition;
     }
 
     @Override
