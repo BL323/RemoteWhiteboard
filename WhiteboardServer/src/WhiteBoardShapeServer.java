@@ -1,8 +1,6 @@
 /**
  * Created by BLourence on 15/02/15.
  */
-import apple.laf.JRSUIConstants;
-
 import java.awt.*;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -25,18 +23,17 @@ public class WhiteBoardShapeServer extends UnicastRemoteObject implements IWhite
 
     public void addShape(ShapeType shapeType, Color color, int size, Point point) throws RemoteException
     {
-        //create shape
+        //create and add shape as IShape
         IShape shape = shapeFactory.GenerateShape(shapeType, color, size, point);
         shapeList.add(shape);
 
-        //debug messages
-        System.out.println("Adding Shape");
         notifyClientsUpdate();
 
     }
     public void clearWhiteboard()
     {
         shapeList.clear();
+        notifyClientsUpdate();
     }
     public ArrayList<IShape> getCurrentShapes()
     {

@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
@@ -6,7 +7,7 @@ import java.util.ArrayList;
 /**
  * Created by BLourence on 15/02/15.
  */
-public class WhiteboardClient
+public class WhiteboardClient implements Serializable
 {
     private int size = 30;
     public int getSize(){return size;}
@@ -19,6 +20,7 @@ public class WhiteboardClient
     private IWhiteboard whiteboard = null;
     private static WhiteboardView whiteboardView = null;
     private IClientCallback callbackClient = null;
+    private ClientCallback temp = null;
 
     private ArrayList<IShape> shapes;
 
@@ -40,11 +42,16 @@ public class WhiteboardClient
             whiteboard = (IWhiteboard) Naming.lookup("Whiteboard");
             System.out.println("Whiteboard initialised....");
 
+            //register client for callbacks
+            IClientCallback callbackClients = new ClientCallback();
+            whiteboard.registerClient(callbackClients);
+
+            //hack around to stop WhiteboardClient being serialised to the sever
+            temp = (ClientCallback)callbackClients;
+            temp.setWhiteboardClient(this);
+
             System.out.println("Retrieving current whiteboard shapes");
             shapes = whiteboard.getCurrentShapes();
-
-            callbackClient = new ClientCallback(this);
-            whiteboard.registerClient(callbackClient);
         }
         catch (Exception ex)
         {
