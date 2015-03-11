@@ -9,7 +9,6 @@ public class WhiteboardServerApp
 {
     public static void main(String[] args)
     {
-
         try
         {
             //creates registry instance in JavaVm

@@ -2,7 +2,6 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.MouseEvent;
 import javax.swing.event.MouseInputListener;
-import java.util.ArrayList;
 
 /**
  * Created by BLourence on 17/02/15.
@@ -23,7 +22,7 @@ public class WhiteboardPanel extends JPanel implements MouseInputListener
         repaint();
     }
 
-    public void SetWhiteboardClient(WhiteboardClient inputWhiteboardClient)
+    public void setWhiteboardClient(WhiteboardClient inputWhiteboardClient)
     {
         whiteboardClient = inputWhiteboardClient;
     }
@@ -41,6 +40,7 @@ public class WhiteboardPanel extends JPanel implements MouseInputListener
         for(int shapeIndex = 0; shapeIndex < whiteboardClient.GetCurrentShapes().size(); shapeIndex++)
         {
             IShape shape = whiteboardClient.GetCurrentShapes().get(shapeIndex);
+            graphics.setColor(shape.getColour());
             shape.draw(graphics);
         }
     }

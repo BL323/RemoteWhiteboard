@@ -41,13 +41,16 @@ public class WhiteboardView implements ActionListener, ChangeListener
 
         sizeSpinner.setValue(30);
         sizeSpinner.addChangeListener(this);
+
+        colourPicker.addActionListener(this);
+
     }
 
 
     public void SetController(WhiteboardClient inputController)
     {
         whiteboardClient = inputController;
-        whiteboardPannel.SetWhiteboardClient(inputController);
+        whiteboardPannel.setWhiteboardClient(inputController);
     }
 
     public void ShowForm()
@@ -81,8 +84,25 @@ public class WhiteboardView implements ActionListener, ChangeListener
         else if(act.equals("Clear"))
         {
             whiteboardPannel.clearWhiteboard();
-            //whiteboardClient.clearWhiteboard();
         }
+        else if(act.equals("comboBoxChanged"))
+        {
+            String colStr = colourPicker.getSelectedItem().toString();
+
+            whiteboardClient.setColour(assignColour(colStr));
+        }
+    }
+
+    private Color assignColour(String colourString)
+    {
+        if(colourString.equals("Black"))
+            return Color.black;
+        else if(colourString.equals("Green"))
+            return Color.green;
+        else if(colourString.equals("Red"))
+            return Color.red;
+        else
+            return Color.blue;
     }
 
     @Override

@@ -30,21 +30,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Rectangle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/Rectangle.java">
+      <file leaf-file-name="WhiteboardClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/WhiteboardClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="968" max-vertical-offset="1485">
+              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding>
+                <element signature="method#GetCurrentShapes#0;class#WhiteboardClient#0" expanded="false" />
+                <element signature="method#main#0;class#WhiteboardClient#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WhiteBoardShapeServer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WhiteBoardShapeServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WhiteboardServer/src/WhiteBoardShapeServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34957626" vertical-offset="0" max-vertical-offset="750">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="750">
+              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
               <folding>
                 <element signature="method#WhiteBoardShapeServer#0;class#WhiteBoardShapeServer#0" expanded="false" />
                 <element signature="method#clearWhiteboard#0;class#WhiteBoardShapeServer#0" expanded="false" />
@@ -58,12 +61,44 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="WhiteboardServerApp.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WhiteboardServer/src/WhiteboardServerApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2542373" vertical-offset="0" max-vertical-offset="472">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WhiteboardView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/WhiteboardView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="473" max-vertical-offset="1710">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BaseShape.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/BaseShape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="540">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WhiteboardPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/WhiteboardPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1425">
+              <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,40 +116,18 @@
       <file leaf-file-name="IShape.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/IShape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+              <caret line="13" column="19" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Circle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/Circle.java">
+      <file leaf-file-name="ClientCallback.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/ClientCallback.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IWhiteboard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/IWhiteboard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Triangle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/Triangle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -142,17 +155,17 @@
         <option value="$PROJECT_DIR$/RemoteWhiteboard.Core/src/Circle.java" />
         <option value="$PROJECT_DIR$/RemoteWhiteboard.Core/src/Rectangle.java" />
         <option value="$PROJECT_DIR$/RemoteWhiteboard.Core/src/Triangle.java" />
-        <option value="$PROJECT_DIR$/WhiteboardClient/src/WhiteboardView.java" />
-        <option value="$PROJECT_DIR$/WhiteboardServer/src/WhiteboardServerApp.java" />
         <option value="$PROJECT_DIR$/RemoteWhiteboard.Core/src/IClientCallback.java" />
         <option value="$PROJECT_DIR$/RemoteWhiteboard.Core/src/ClientCallback.java" />
-        <option value="$PROJECT_DIR$/WhiteboardClient/src/WhiteboardPanel.java" />
         <option value="$PROJECT_DIR$/RemoteWhiteboard.Core/src/IWhiteboard.java" />
         <option value="$PROJECT_DIR$/WhiteboardClient/src/ClientCallback.java" />
-        <option value="$PROJECT_DIR$/WhiteboardClient/src/WhiteboardClient.java" />
-        <option value="$PROJECT_DIR$/RemoteWhiteboard.Core/src/IShape.java" />
         <option value="$PROJECT_DIR$/RemoteWhiteboard.Core/src/BaseShape.java" />
         <option value="$PROJECT_DIR$/WhiteboardServer/src/WhiteBoardShapeServer.java" />
+        <option value="$PROJECT_DIR$/WhiteboardClient/src/WhiteboardView.java" />
+        <option value="$PROJECT_DIR$/WhiteboardClient/src/WhiteboardClient.java" />
+        <option value="$PROJECT_DIR$/RemoteWhiteboard.Core/src/IShape.java" />
+        <option value="$PROJECT_DIR$/WhiteboardClient/src/WhiteboardPanel.java" />
+        <option value="$PROJECT_DIR$/WhiteboardServer/src/WhiteboardServerApp.java" />
       </list>
     </option>
   </component>
@@ -200,6 +213,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -316,8 +331,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,14 +343,14 @@
     <property name="recentsLimit" value="5" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/WhiteboardCore/WhiteboardCore.jar!/" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="217" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="options.splitter.main.proportions" value="0.19233777" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
@@ -547,7 +560,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -596,7 +609,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="51" />
+      <option name="time" value="54" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -605,16 +618,26 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/IWhiteboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="375">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/Triangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="525">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/WhiteboardView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="563" max-vertical-offset="1080">
           <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ShowForm#0;class#WhiteboardView#0" expanded="false" />
-            <element signature="e#2448#2449#0" expanded="true" />
-            <element signature="e#2490#2491#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -644,23 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="398" max-vertical-offset="1290">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#WhiteboardPanel#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#SetWhiteboardClient#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="e#706#707#0" expanded="false" />
-            <element signature="e#752#753#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mouseClicked#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mouseReleased#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mouseEntered#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mouseExited#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mouseMoved#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="e#1826#1827#0" expanded="false" />
-            <element signature="e#1851#1852#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,14 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="750">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setSelectedShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#clearShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#AddNewShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#GetCurrentShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#main#0;class#WhiteboardClient#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -695,12 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ShowForm#0;class#WhiteboardView#0" expanded="false" />
-            <element signature="e#2448#2449#0" expanded="true" />
-            <element signature="e#2490#2491#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -708,14 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="750">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setSelectedShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#clearShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#AddNewShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#GetCurrentShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#main#0;class#WhiteboardClient#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -728,12 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ShowForm#0;class#WhiteboardView#0" expanded="false" />
-            <element signature="e#2448#2449#0" expanded="true" />
-            <element signature="e#2490#2491#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -741,14 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="990">
           <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setSelectedShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#clearShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#AddNewShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#GetCurrentShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#main#0;class#WhiteboardClient#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -784,14 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="825">
           <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setSelectedShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#clearShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#AddNewShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#GetCurrentShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#main#0;class#WhiteboardClient#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -806,12 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="630">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ShowForm#0;class#WhiteboardView#0" expanded="false" />
-            <element signature="e#2448#2449#0" expanded="true" />
-            <element signature="e#2490#2491#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -831,14 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="735">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setSelectedShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#clearShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#AddNewShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#GetCurrentShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#main#0;class#WhiteboardClient#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -867,14 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="690">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setSelectedShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#clearShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#AddNewShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#GetCurrentShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#main#0;class#WhiteboardClient#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -927,65 +867,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/WhiteboardView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="863" max-vertical-offset="1395">
-          <caret line="95" column="35" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ShowForm#0;class#WhiteboardView#0" expanded="false" />
-            <element signature="e#2448#2449#0" expanded="true" />
-            <element signature="e#2490#2491#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/WhiteboardView.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/WhiteboardPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="870">
-          <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#WhiteboardPanel#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#SetWhiteboardClient#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="e#706#707#0" expanded="false" />
-            <element signature="e#752#753#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mouseClicked#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mouseReleased#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mouseEntered#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mouseExited#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="method#mouseMoved#0;class#WhiteboardPanel#0" expanded="false" />
-            <element signature="e#1826#1827#0" expanded="false" />
-            <element signature="e#1851#1852#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/IClientCallback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/ClientCallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1001,9 +886,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1015,29 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WhiteboardServer/src/WhiteboardServerApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43589744" vertical-offset="8" max-vertical-offset="480">
-          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/WhiteboardClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.08857809" vertical-offset="668" max-vertical-offset="1140">
-          <caret line="48" column="80" selection-start-line="48" selection-start-column="80" selection-end-line="48" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setSelectedShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#clearShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#AddNewShape#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#GetCurrentShapes#0;class#WhiteboardClient#0" expanded="false" />
-            <element signature="method#main#0;class#WhiteboardClient#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
@@ -1046,19 +906,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/IShape.java">
+    <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/WhiteboardView.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/WhiteboardView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="473" max-vertical-offset="1710">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/BaseShape.java">
+    <entry file="file://$PROJECT_DIR$/WhiteboardServer/src/WhiteBoardShapeServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="750">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding>
+            <element signature="method#WhiteBoardShapeServer#0;class#WhiteBoardShapeServer#0" expanded="false" />
+            <element signature="method#clearWhiteboard#0;class#WhiteBoardShapeServer#0" expanded="false" />
+            <element signature="method#noOfRegisteredClients#0;class#WhiteBoardShapeServer#0" expanded="false" />
+            <element signature="method#notifyClientsUpdate#0;class#WhiteBoardShapeServer#0" expanded="false" />
+            <element signature="method#registerClient#0;class#WhiteBoardShapeServer#0" expanded="false" />
+            <element signature="method#deregisterClient#0;class#WhiteBoardShapeServer#0" expanded="false" />
+            <element signature="method#getInstance#0;class#WhiteBoardShapeServer#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,19 +943,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WhiteboardServer/src/WhiteBoardShapeServer.java">
+    <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/ClientCallback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34957626" vertical-offset="0" max-vertical-offset="750">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/BaseShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="540">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RemoteWhiteboard.Core/src/IShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/WhiteboardPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1425">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
           <folding>
-            <element signature="method#WhiteBoardShapeServer#0;class#WhiteBoardShapeServer#0" expanded="false" />
-            <element signature="method#clearWhiteboard#0;class#WhiteBoardShapeServer#0" expanded="false" />
-            <element signature="method#noOfRegisteredClients#0;class#WhiteBoardShapeServer#0" expanded="false" />
-            <element signature="method#notifyClientsUpdate#0;class#WhiteBoardShapeServer#0" expanded="false" />
-            <element signature="method#registerClient#0;class#WhiteBoardShapeServer#0" expanded="false" />
-            <element signature="method#deregisterClient#0;class#WhiteBoardShapeServer#0" expanded="false" />
-            <element signature="method#getInstance#0;class#WhiteBoardShapeServer#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WhiteboardClient/src/WhiteboardClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="968" max-vertical-offset="1485">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <element signature="method#GetCurrentShapes#0;class#WhiteboardClient#0" expanded="false" />
+            <element signature="method#main#0;class#WhiteboardClient#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WhiteboardServer/src/WhiteboardServerApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2542373" vertical-offset="0" max-vertical-offset="472">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

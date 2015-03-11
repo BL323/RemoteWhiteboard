@@ -11,6 +11,7 @@ public interface IShape extends Remote
     Point getPosition();
     void setPosition(Point point);
 
+    Color getColour();
     void setColour(Color colour);
 
     int getSize();

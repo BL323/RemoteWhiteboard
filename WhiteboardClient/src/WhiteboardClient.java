@@ -13,7 +13,7 @@ public class WhiteboardClient implements Serializable
     public int getSize(){return size;}
     public void setSize(int inputSize){size = inputSize;}
 
-    private Color colour;
+    private Color colour = Color.black;
     public Color getColour(){return colour;}
     public void setColour(Color inputColour){colour = inputColour;}
 
