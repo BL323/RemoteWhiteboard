@@ -16,7 +16,6 @@ public class Triangle extends BaseShape implements IShape
         Point pos = getPosition();
         graphics.setColor(getColour());
 
-        //pos[20, 10]
         int xSpacer = getSize()/2;
         int ySpacer = getSize();
 

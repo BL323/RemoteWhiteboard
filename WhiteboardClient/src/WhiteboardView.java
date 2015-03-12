@@ -1,3 +1,5 @@
+import sun.awt.WindowClosingListener;
+
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -9,30 +11,26 @@ import java.awt.event.*;
  */
 public class WhiteboardView implements ActionListener, ChangeListener
 {
-    private int size;
-
     private JButton clearBtn;
     private JButton circleBtn;
     private JButton triangleBtn;
     private JButton rectangleBtn;
-
     private JPanel panel1;
     private JPanel WhiteboardContainerPannel;
     private WhiteboardPanel whiteboardPannel;
     private JSpinner sizeSpinner;
     private JComboBox colourPicker;
-
+    private JLabel connectedClientsLbl;
+    private JLabel clientNumberLbl;
     private WhiteboardClient whiteboardClient = null;
 
-
+    //Constructor
     public WhiteboardView()
     {
-        //Button Listeners
         rectangleBtn.addActionListener(this);
         circleBtn.addActionListener(this);
         triangleBtn.addActionListener(this);
         clearBtn.addActionListener(this);
-
 
         colourPicker.addItem("Black");
         colourPicker.addItem("Red");
@@ -41,19 +39,34 @@ public class WhiteboardView implements ActionListener, ChangeListener
 
         sizeSpinner.setValue(30);
         sizeSpinner.addChangeListener(this);
-
         colourPicker.addActionListener(this);
-
     }
+    private void updateClientInfo()
+    {
+        String connectedClientsStr = whiteboardClient.getConnectedClients() + "";
+        String clientNumberStr = whiteboardClient.getClientNumber() + "";
 
-
-    public void SetController(WhiteboardClient inputController)
+        connectedClientsLbl.setText(connectedClientsStr);
+        clientNumberLbl.setText(clientNumberStr);
+    }
+    private Color assignColour(String colourString)
+    {
+        if(colourString.equals("Black"))
+            return Color.black;
+        else if(colourString.equals("Green"))
+            return Color.green;
+        else if(colourString.equals("Red"))
+            return Color.red;
+        else
+            return Color.blue;
+    }
+    public void setController(WhiteboardClient inputController)
     {
         whiteboardClient = inputController;
         whiteboardPannel.setWhiteboardClient(inputController);
+        updateClientInfo();
     }
-
-    public void ShowForm()
+    public void showForm()
     {
         JFrame frame = new JFrame("MyForm");
         frame.setContentPane(panel1);
@@ -62,8 +75,22 @@ public class WhiteboardView implements ActionListener, ChangeListener
         frame.pack();
         frame.setVisible(true);
         frame.setSize(700,450);
-    }
 
+        frame.addWindowListener(new WindowAdapter()
+        {
+            @Override
+            public void windowClosing (WindowEvent we)
+            {
+                whiteboardClient.deregisterClient();
+                System.exit(0);
+            }
+        });
+    }
+    public void invokeRepaint()
+    {
+        updateClientInfo();
+        whiteboardPannel.repaint();
+    }
 
     @Override
     public void actionPerformed(ActionEvent actionEvent)
@@ -92,27 +119,9 @@ public class WhiteboardView implements ActionListener, ChangeListener
             whiteboardClient.setColour(assignColour(colStr));
         }
     }
-
-    private Color assignColour(String colourString)
-    {
-        if(colourString.equals("Black"))
-            return Color.black;
-        else if(colourString.equals("Green"))
-            return Color.green;
-        else if(colourString.equals("Red"))
-            return Color.red;
-        else
-            return Color.blue;
-    }
-
     @Override
     public void stateChanged(ChangeEvent changeEvent)
     {
         whiteboardClient.setSize((Integer)sizeSpinner.getValue());
-    }
-
-    public void invokeRepaint()
-    {
-        whiteboardPannel.repaint();
     }
 }
