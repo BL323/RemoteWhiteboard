@@ -6,6 +6,13 @@ import javax.swing.event.MouseInputListener;
 
 /**
  * Created by BLourence on 17/02/15.
+ *
+ * WhiteboardPanel an extension of JPanel that facilitates painting IShape objects.
+ * setWhiteboardClient(WhiteboardClient inputWhiteboardClient) in order to identify the whiteboard client
+ * so it can be used to invoke remote methods.
+ *
+ * invokeRepaint() allows the WhiteboardClient to force the panel to repaint when updated.
+ *
  */
 public class WhiteboardPanel extends JPanel implements MouseInputListener
 {

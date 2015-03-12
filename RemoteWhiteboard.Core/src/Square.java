@@ -2,10 +2,13 @@ import java.awt.*;
 
 /**
  * Created by BLourence on 15/02/15.
+ *
+ * Provides overridden draw(Graphics graphics) method and implements as IShape
+ *
  */
-public class Rectangle extends BaseShape implements IShape
+public class Square extends BaseShape implements IShape
 {
-    public Rectangle(Color inputColour, int inputSize, Point inputPosition)
+    public Square(Color inputColour, int inputSize, Point inputPosition)
     {
         super(inputColour, inputSize, inputPosition);
     }

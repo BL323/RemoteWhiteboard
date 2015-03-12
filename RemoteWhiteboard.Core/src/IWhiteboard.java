@@ -1,15 +1,17 @@
-/**
- * Created by BLourence on 15/02/15.
- */
 import java.awt.*;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
-import java.util.Vector;
+
+/**
+ * Created by BLourence on 15/02/15.
+ *
+ * Exposes methods that can be invoked remotely from client to server.
+ *
+ */
 
 public interface IWhiteboard extends Remote
 {
-    //void AddShape(IShape shape) throws RemoteException;
     void addShape(ShapeType shapeType, Color colour, int size, Point position) throws RemoteException;
     void clearWhiteboard() throws RemoteException;
     int noOfRegisteredClients() throws RemoteException;

@@ -2,8 +2,23 @@ import java.awt.*;
 import java.io.Serializable;
 import java.rmi.Naming;
 import java.util.ArrayList;
+
 /**
  * Created by BLourence on 15/02/15.
+ *
+ * Once initialised setupClient() performs a lookup to the remote whiteboard server.
+ * Then the client registers itself to the server and is returned with a client number.
+ *
+ * deregisterClient() removes the client from the list of registered clients on the server.
+ *
+ * updateClient() retrieves the list of shapes from the server getCurrentShapes(), and updates the number of clients
+ * that are connected to the server getNumberOfClients().
+ *
+ * clearShapes() invokes the server to clear the list of shapes being stored.
+ *
+ * addNewShape(Point point) itself calls the rmi method on the server addShape(getCurrentShape(), getColour(), getSize(), point)
+ * which as stipulated in the coursework brief "A client should add a graphical object to the white-board by specifying
+ * its type (circle, triangle or square), colour, size, and position."
  */
 public class WhiteboardClient implements Serializable
 {
@@ -74,7 +89,7 @@ public class WhiteboardClient implements Serializable
         }
         return result;
     }
-    private ArrayList<IShape> GetCurrentShapes()
+    private ArrayList<IShape> getCurrentShapes()
     {
         ArrayList<IShape> currentShapes = null;
         try
@@ -89,7 +104,7 @@ public class WhiteboardClient implements Serializable
     }
     public void updateClient()
     {
-        shapes = GetCurrentShapes();
+        shapes = getCurrentShapes();
         connectedClients = getNumberOfClients();
         whiteboardView.invokeRepaint();
     }

@@ -1,5 +1,3 @@
-import sun.awt.WindowClosingListener;
-
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -8,16 +6,36 @@ import java.awt.event.*;
 
 /**
  * Created by BLourence on 16/02/15.
+ *
+ * WhiteboardView the source file accompaniment to WhiteboardView.form
+ *
+ * updateClientInfo() updates JLabels displaying client information with data
+ * retrieved from the server.
+ *
+ * assignColour(string colourString) returns Color(awt) for new shapes.
+ *
+ * setController(WhiteboardClient inputController) assigns a references to the whiteboardClient
+ * in order to invoke methods from actions on the view.
+ *
+ * showForm() packs and displays the view to the user.
+ *
+ * invokeRepaint() updates client information by calling updateClientInfo() and repaints shapes
+ * in the custom whiteboardPanel.
+ *
+ * actionPerformed(ActionEvent actionEvent) captures events in the view such as selecting a new shape,
+ * clearing the whiteboard or colour combo box being updated.
+ *
+ * stateChanged(ChangeEvent changeEvent) captures when the size has been altered from the view.
  */
 public class WhiteboardView implements ActionListener, ChangeListener
 {
     private JButton clearBtn;
     private JButton circleBtn;
     private JButton triangleBtn;
-    private JButton rectangleBtn;
+    private JButton squareBtn;
     private JPanel panel1;
-    private JPanel WhiteboardContainerPannel;
-    private WhiteboardPanel whiteboardPannel;
+    private JPanel WhiteboardContainerPanel;
+    private WhiteboardPanel whiteboardPanel;
     private JSpinner sizeSpinner;
     private JComboBox colourPicker;
     private JLabel connectedClientsLbl;
@@ -27,7 +45,7 @@ public class WhiteboardView implements ActionListener, ChangeListener
     //Constructor
     public WhiteboardView()
     {
-        rectangleBtn.addActionListener(this);
+        squareBtn.addActionListener(this);
         circleBtn.addActionListener(this);
         triangleBtn.addActionListener(this);
         clearBtn.addActionListener(this);
@@ -41,6 +59,7 @@ public class WhiteboardView implements ActionListener, ChangeListener
         sizeSpinner.addChangeListener(this);
         colourPicker.addActionListener(this);
     }
+
     private void updateClientInfo()
     {
         String connectedClientsStr = whiteboardClient.getConnectedClients() + "";
@@ -60,15 +79,16 @@ public class WhiteboardView implements ActionListener, ChangeListener
         else
             return Color.blue;
     }
+
     public void setController(WhiteboardClient inputController)
     {
         whiteboardClient = inputController;
-        whiteboardPannel.setWhiteboardClient(inputController);
+        whiteboardPanel.setWhiteboardClient(inputController);
         updateClientInfo();
     }
     public void showForm()
     {
-        JFrame frame = new JFrame("MyForm");
+        JFrame frame = new JFrame("Whiteboard");
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -89,20 +109,20 @@ public class WhiteboardView implements ActionListener, ChangeListener
     public void invokeRepaint()
     {
         updateClientInfo();
-        whiteboardPannel.repaint();
+        whiteboardPanel.repaint();
     }
 
     @Override
     public void actionPerformed(ActionEvent actionEvent)
     {
         String act = actionEvent.getActionCommand();
-        if(act.equals("Rectangle"))
+        if(act.equals("Square"))
         {
-            whiteboardClient.setSelectedShape(ShapeType.Rectanlge);
+            whiteboardClient.setSelectedShape(ShapeType.Square);
         }
         else if(act.equals("Triangle"))
         {
-            whiteboardClient.setSelectedShape(ShapeType.Trianlge);
+            whiteboardClient.setSelectedShape(ShapeType.Triangle);
         }
         else if(act.equals("Circle"))
         {
@@ -110,7 +130,7 @@ public class WhiteboardView implements ActionListener, ChangeListener
         }
         else if(act.equals("Clear"))
         {
-            whiteboardPannel.clearWhiteboard();
+            whiteboardPanel.clearWhiteboard();
         }
         else if(act.equals("comboBoxChanged"))
         {

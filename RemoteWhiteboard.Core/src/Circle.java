@@ -7,6 +7,8 @@ import java.awt.geom.Rectangle2D;
 
 /**
  * Created by BLourence on 15/02/15.
+ *
+ * Provides overridden draw(Graphics graphics) method and implements as IShape
  */
 public class Circle extends BaseShape implements IShape
 {

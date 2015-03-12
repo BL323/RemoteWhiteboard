@@ -1,39 +1,32 @@
-/**
- * Created by BLourence on 15/02/15.
- */
 import java.awt.*;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
+/**
+ * Created by BLourence on 15/02/15.
+ *
+ * ArrayList shapeList: is created to hold references to shape objects added to the whiteboard.
+ *
+ * ShapeFactory shapeFactory: generates shapes based on the information, returns IShape therefore the client
+ * does not need to know how to create a shape it just asks via the factory.
+ *
+ * Callbacks:
+ * ArrayList clientCallbacks: holds a list of clients that are registered for callbacks from the server.
+ * registerClient(IClientCallback iClientCallback) is used to register a client for callbacks.
+ * deregisterClient(IClientCallback iClientCallback) removes the passed client.
+ * notifyClientsUpdate() causes each registered client to update it's whiteboard, connected client info.
+ */
+
 public class WhiteBoardShapeServer extends UnicastRemoteObject implements IWhiteboard
 {
-    //Singleton instance
-    private static WhiteBoardShapeServer instance = null;
-    public static WhiteBoardShapeServer getInstance()
-    {
-        if(instance != null)
-            return instance;
-
-        try
-        {
-            instance = new WhiteBoardShapeServer();
-
-        }catch (Exception ex)
-        {
-            System.out.println("Error setting up up server instance: " + ex.getMessage());
-            ex.getStackTrace();
-        }
-
-        return instance;
-    }
     private int clientNo = 1;
-    private ArrayList<IShape> shapeList = new ArrayList<IShape>();
     private ShapeFactory shapeFactory = new ShapeFactory();
+    private ArrayList<IShape> shapeList = new ArrayList<IShape>();
     private ArrayList<IClientCallback> clientCallbacks = new ArrayList<IClientCallback>();
 
     //Constructor
-    private WhiteBoardShapeServer() throws RemoteException
+    public WhiteBoardShapeServer() throws RemoteException
     {
         super();
         System.out.println("Starting whiteboard server....");
@@ -41,7 +34,7 @@ public class WhiteBoardShapeServer extends UnicastRemoteObject implements IWhite
     public void addShape(ShapeType shapeType, Color color, int size, Point point) throws RemoteException
     {
         //create and add shape as IShape
-        IShape shape = shapeFactory.GenerateShape(shapeType, color, size, point);
+        IShape shape = shapeFactory.generateShape(shapeType, color, size, point);
         shapeList.add(shape);
 
         notifyClientsUpdate();
@@ -51,10 +44,6 @@ public class WhiteBoardShapeServer extends UnicastRemoteObject implements IWhite
         shapeList.clear();
         notifyClientsUpdate();
     }
-    public ArrayList<IShape> getCurrentShapes()
-    {
-        return shapeList;
-    }
     public int noOfRegisteredClients()
     {
         if(clientCallbacks != null)
@@ -62,6 +51,11 @@ public class WhiteBoardShapeServer extends UnicastRemoteObject implements IWhite
 
         return 0;
     }
+    public ArrayList<IShape> getCurrentShapes()
+    {
+        return shapeList;
+    }
+
 
     //Callback Methods
     public void notifyClientsUpdate()
@@ -78,15 +72,18 @@ public class WhiteBoardShapeServer extends UnicastRemoteObject implements IWhite
             }
         }
     }
-    public int registerClient(IClientCallback iClientCallback) throws RemoteException
+    public synchronized int registerClient(IClientCallback iClientCallback) throws RemoteException
     {
         clientCallbacks.add(iClientCallback);
         notifyClientsUpdate();
         return clientNo++;
     }
-    public void deregisterClient(IClientCallback iClientCallback) throws RemoteException
+    public synchronized void deregisterClient(IClientCallback iClientCallback) throws RemoteException
     {
-        clientCallbacks.remove(iClientCallback);
-        notifyClientsUpdate();
+        if(clientCallbacks.contains(iClientCallback))
+        {
+            clientCallbacks.remove(iClientCallback);
+            notifyClientsUpdate();
+        }
     }
 }

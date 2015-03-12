@@ -2,6 +2,9 @@ import java.awt.*;
 
 /**
  * Created by BLourence on 17/02/15.
+ *
+ s* Provides overridden draw(Graphics graphics) method and implements as IShape
+ *
  */
 public class Triangle extends BaseShape implements IShape
 {
